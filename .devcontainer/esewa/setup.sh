@@ -18,4 +18,8 @@ cargo binstall -y just cargo-generate
 curl --proto '=https' --tlsv1.2 -LsSf \
   https://github.com/diesel-rs/diesel/releases/latest/download/diesel_cli-installer.sh | sh
 
+# Go yq, needed by scripts/seed_superposition.sh.
+sudo curl -sSL -o /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
+sudo chmod +x /usr/local/bin/yq
+
 echo "Toolchain ready: $(rustc --version)"
