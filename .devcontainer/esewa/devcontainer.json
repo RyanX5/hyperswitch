@@ -1,0 +1,21 @@
+// Dev environment for building the eSewa connector. Not part of the upstream PR.
+// Dependencies (Postgres, Redis, Superposition, migrations) run in Docker via
+// docker-compose-development.yml; the router itself is built natively with cargo.
+{
+  "name": "hyperswitch-esewa",
+  "image": "mcr.microsoft.com/devcontainers/rust:1-bookworm",
+  "hostRequirements": { "cpus": 16, "memory": "64gb", "storage": "128gb" },
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/node:1": { "version": "22" }
+  },
+  "containerEnv": { "CARGO_INCREMENTAL": "1" },
+  "postCreateCommand": "bash .devcontainer/esewa/setup.sh",
+  "postStartCommand": "bash .devcontainer/esewa/deps-up.sh",
+  "forwardPorts": [8080, 8081],
+  "customizations": {
+    "vscode": {
+      "extensions": ["rust-lang.rust-analyzer", "tamasfe.even-better-toml"]
+    }
+  }
+}
