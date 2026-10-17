@@ -84,6 +84,7 @@ elavon.base_url = "https://api.convergepay.com/VirtualMerchant/"
 # `elavon` entry above, which is Elavon Converge (an XML API).
 elavon_pg.base_url = "https://api.eu.convergepay.com"
 envoy.base_url = "https://envoytx.com/"
+esewa.base_url = "https://rc-epay.esewa.com.np/"
 etisalat.base_url = "https://ipg.comtrust.ae:2443"
 facilitapay.base_url = "https://api.facilitapay.com/api/v1"
 finix.base_url = "https://finix.live-payments-api.com"

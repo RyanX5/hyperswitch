@@ -325,6 +325,7 @@ pub struct ConnectorConfig {
     pub elavon: Option<ConnectorTomlConfig>,
     pub elavon_pg: Option<ConnectorTomlConfig>,
     pub envoy: Option<ConnectorTomlConfig>,
+    pub esewa: Option<ConnectorTomlConfig>,
     pub etisalat: Option<ConnectorTomlConfig>,
     #[cfg(feature = "payouts")]
     pub envoy_payout: Option<ConnectorTomlConfig>,

@@ -9723,3 +9723,7 @@ payment_method_type = "Discover"
 payment_method_type = "DinersClub"
 [[globalpayments_realex.debit]]
 payment_method_type = "UnionPay"
+
+[esewa]
+[esewa.connector_auth.HeaderKey]
+api_key = "API Key"
