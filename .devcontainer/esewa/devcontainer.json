@@ -11,7 +11,10 @@
     "ghcr.io/devcontainers/features/node:1": { "version": "22" }
   },
   // Keep the debug build small: line tables only, mold for linking, 4 parallel rustc.
+  // target/ lives on the codespace's large local disk (/tmp); it is wiped when the
+  // codespace stops, so a stop means a full rebuild.
   "containerEnv": {
+    "CARGO_TARGET_DIR": "/tmp/target",
     "CARGO_INCREMENTAL": "1",
     "CARGO_BUILD_JOBS": "4",
     "CARGO_PROFILE_DEV_DEBUG": "line-tables-only",
