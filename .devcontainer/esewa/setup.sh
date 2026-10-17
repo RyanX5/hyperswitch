@@ -4,7 +4,7 @@ set -euo pipefail
 
 sudo apt-get update
 sudo apt-get install -y --no-install-recommends \
-  protobuf-compiler libpq-dev libssl-dev pkg-config postgresql-client jq
+  protobuf-compiler libpq-dev libssl-dev pkg-config postgresql-client jq mold
 
 rustup update stable
 rustup default stable
